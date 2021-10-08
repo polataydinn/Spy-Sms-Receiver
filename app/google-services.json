@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "516104083327",
+    "firebase_url": "https://spy-sms-receiver-default-rtdb.firebaseio.com",
+    "project_id": "spy-sms-receiver",
+    "storage_bucket": "spy-sms-receiver.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:516104083327:android:bde5d72d6e430f4bc56c4a",
+        "android_client_info": {
+          "package_name": "com.example.smsreceiver"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "516104083327-34fr5g17427ipvsvaiiobeokidt9mb55.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBGwZvW0DxTPE-yBWRT9Tf6cF7yxbyqu18"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "516104083327-34fr5g17427ipvsvaiiobeokidt9mb55.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
