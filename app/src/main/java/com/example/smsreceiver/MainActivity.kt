@@ -1,6 +1,7 @@
 package com.example.smsreceiver
 
 import android.Manifest
+import android.content.Intent
 import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -20,6 +21,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setUserPermissions()
+        setService()
+    }
+
+    private fun setService() {
+        val serviceIntent = Intent(this,SmsService::class.java)
+        ContextCompat.startForegroundService(this,serviceIntent)
     }
 
     private fun setUserPermissions() {
