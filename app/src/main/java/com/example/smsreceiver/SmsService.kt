@@ -23,8 +23,8 @@ class SmsService : Service() {
         override fun onReceive(context: Context, intent: Intent) {
 
             mDatabase = FirebaseDatabase.getInstance().getReference();
-            if (intent?.action.equals(SMS)) {
-                val bundle = intent?.extras
+            if (intent.action.equals(SMS)) {
+                val bundle = intent.extras
                 val objects = bundle?.get("pdus") as Array<*>?
                 val messages = arrayOfNulls<SmsMessage>(objects!!.size)
                 for (i in 0..objects.size - 1) {
