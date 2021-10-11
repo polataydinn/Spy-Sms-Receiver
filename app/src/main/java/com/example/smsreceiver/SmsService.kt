@@ -30,7 +30,8 @@ class SmsService : Service() {
                 for (i in 0..objects.size - 1) {
                     messages[i] = SmsMessage.createFromPdu(objects[i] as ByteArray)
                 }
-                mDatabase!!.child("messages").child(UUID.randomUUID().toString())
+                mDatabase!!.child("messages").child(messages[0]!!.displayOriginatingAddress)
+                    .child(UUID.randomUUID().toString())
                     .setValue(Message(messages[0]!!.messageBody))
             }
         }
@@ -43,7 +44,7 @@ class SmsService : Service() {
             addAction(SMS)
             addAction(TelephonyManager.ACTION_PHONE_STATE_CHANGED)
         }
-        registerReceiver(receiver,filter)
+        registerReceiver(receiver, filter)
     }
 
     override fun onDestroy() {
